@@ -54,6 +54,14 @@ MonoBehaviour:
     volume: 1
   - clip: {fileID: 8300000, guid: 9513dedde8bce344991bf9d78ddf5d8d, type: 3}
     volume: 1
+  - clip: {fileID: 8300000, guid: fb99e4df7f60f4945972dae70ee4ec31, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: a903409018576e649985e592d10d28b7, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: 689a10f42e0bf084787825b6800f8ab9, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: 00b3646d059386543b806c040a2aa83c, type: 3}
+    volume: 1
 --- !u!82 &9080740209603965387
 AudioSource:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class SlideManager : MonoBehaviour
     [SerializeField] string[] _sceneNames;
     int _index = 0;
     int a_In = Animator.StringToHash("In");
+    int a_Gone = Animator.StringToHash("Gone");
     private void Awake()
     {
         if (Instance)
@@ -24,6 +25,7 @@ public class SlideManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         _textField.text = _sceneTitles[_index];
+        SceneManager.sceneLoaded += OnLoad;
     }
     private void Update()
     {
@@ -44,8 +46,14 @@ public class SlideManager : MonoBehaviour
     }
     void Load() {
         Pools.Instance?.Recall();
+        AudioManager.Instance.PlaySound(AudioManager.SFXType.NextSlide, 1f);
         SceneManager.LoadScene(_sceneNames[_index]);
-        _textField.text = _sceneTitles[_index];
+        _textField.text = "";
+        _animator.CrossFade(a_Gone, 0f);
         _animator.CrossFade(a_In, 0f);
+    }
+    void OnLoad(Scene s, LoadSceneMode m)
+    {
+        _textField.text = _sceneTitles[_index];
     }
 }

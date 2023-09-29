@@ -52,9 +52,65 @@ MonoBehaviour:
   _sceneTitles:
   - Introduction
   - Basic Animation & Sound
+  - Lower Enemy HP
+  - Higher Rate of Fire
+  - More Enemies
+  - Bigger Bullets
+  - Muzzle Flash
+  - Faster Bullets
+  - Less Accuracy
+  - Impact Effect
+  - Hit Animation
+  - Permanence
+  - Enemy Knockback
+  - Camera Lerp
+  - Camera Position
+  - Screenshake
+  - Player Knockback
+  - Sleep
+  - Strafing
+  - Bullet Permanence
+  - More Bass
+  - Super Machinegun
+  - Random Explosions
+  - Faster Enemies
+  - More Enemies
+  - Even Higher Rate of Fire
+  - More Screenshake
+  - Bigger Explosions
+  - Explosion Permanence
+  - Meaning
   _sceneNames:
   - 1-Boring
   - 2-Basic
+  - 3-Lower HP
+  - 4-Rapidfire
+  - 5-More E
+  - 6-Bigger
+  - 7-Muzzle
+  - 8-Faster
+  - 9-Shake
+  - 10-Impact
+  - 11-OnHit
+  - 12-Dead E
+  - 13-Push E
+  - 14-Lerp
+  - 15-Look
+  - 16-ScShake
+  - 17-Push P
+  - 18-Sleep
+  - 19-Strafe
+  - 20-Casing
+  - 21-Bass
+  - 22-Super
+  - 23-Splode
+  - 24-FASTER
+  - 25-More
+  - 26-RAPID
+  - 27-SHAKE
+  - 28-MEGA
+  - 29-Smoke
+  - 30-Meaning
 --- !u!1001 &8145852222325990128
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,13 +20,15 @@ public class CoyotePlatformerController2D : MonoBehaviour
     bool _strafing = false;
     float _animMomentum;
     float _animSpeed;
+    bool _jumped = false;
     bool _airborne = true;
-    [SerializeField] float _animMax, _animMin, _smoothtime;
+    [SerializeField] float _animMax, _animMin, _smoothtime, _knockbackGravity;
 
     private Touching2D _touching;
     private Rigidbody2D _rigidbody; // Default GravityScale -> 2f, and PhysicsMaterial2D -> NoFriction 
     private Ticker _jumpBuffer;
     private Ticker _coyoteTicker;
+    Vector2 _knockback;
 
     public void SetStrafe(bool value)
     {
@@ -50,6 +52,7 @@ public class CoyotePlatformerController2D : MonoBehaviour
 
     void Update()
     {
+        _knockback.x -= Mathf.Sign(_knockback.x) * _knockbackGravity * Time.deltaTime;
         // Get input from legacy system.
         _inputJumpPressed = Input.GetButtonDown("Jump");
         _inputHorizontal = Input.GetAxis("Horizontal");
@@ -60,6 +63,7 @@ public class CoyotePlatformerController2D : MonoBehaviour
             {
                 _animator.CrossFade(a_Land, 0f);
                 _airborne = false;
+                _jumped = false;
             }
             _coyoteTicker.WindUp();
             float aim = (Mathf.Abs(_inputHorizontal) > 0.01f) ? _animMax : _animMin;
@@ -81,11 +85,12 @@ public class CoyotePlatformerController2D : MonoBehaviour
             _jumpBuffer.Tick(Time.deltaTime);
         }
         // If Coyote time and Jump buffer are both greater than 0f.
-        if (!_coyoteTicker.CheckDone() && !_jumpBuffer.CheckDone())
+        if (!_coyoteTicker.CheckDone() && !_jumpBuffer.CheckDone() && !_jumped)
         {
             // Trigger jump by changing Y-axis of velocity.
             _jumpBuffer.WindDown();
             _coyoteTicker.WindDown();
+            _jumped = true;
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _jumpSpeed);
             _animator.SetTrigger(a_Jump);
             AudioManager.Instance.PlaySound(_jumpSound);
@@ -97,7 +102,7 @@ public class CoyotePlatformerController2D : MonoBehaviour
         // Move horizontally by changing X-axis of velocity.
         Vector2 moveVelocity = (_inputHorizontal * _moveSpeed) * Vector2.right;
         moveVelocity.y = _rigidbody.velocity.y;
-        _rigidbody.velocity = moveVelocity;
+        _rigidbody.velocity = moveVelocity + _knockback;
         // Flip character using Transform.localScale.
         if (Mathf.Abs(_inputHorizontal) > 0.01f && !_strafing)
         {
@@ -105,5 +110,9 @@ public class CoyotePlatformerController2D : MonoBehaviour
             scale.x = (_inputHorizontal > 0f) ? 1f : -1f;
             transform.localScale = scale;
         }
+    }
+    public void SetKnockback(Vector2 knockback)
+    {
+        _knockback = knockback;
     }
 }

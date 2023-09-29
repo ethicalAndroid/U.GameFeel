@@ -14,7 +14,7 @@ TagManager:
   - Floor
   - Bullets
   - Enemies
-  - 
+  - Particles
   - 
   - 
   - 
@@ -41,11 +41,20 @@ TagManager:
   - name: Background
     uniqueID: 3510029143
     locked: 0
+  - name: Smoke
+    uniqueID: 2970584253
+    locked: 0
   - name: Platforms
     uniqueID: 898064495
     locked: 0
+  - name: Dead
+    uniqueID: 2298772507
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Casings
+    uniqueID: 3052358125
     locked: 0
   - name: Bullets
     uniqueID: 1802424637

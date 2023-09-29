@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: 6 Shaky
   m_EditorClassIdentifier: 
   <velocity>k__BackingField: 40
-  <reload>k__BackingField: 0.1
+  <reload>k__BackingField: 0.15
+  <amount>k__BackingField: 1
+  <spread>k__BackingField: 0
   <size>k__BackingField: 0.1
   <spriteSize>k__BackingField: 0.6
   <shake>k__BackingField: 0.1
@@ -23,3 +25,8 @@ MonoBehaviour:
   <hitParticle>k__BackingField: 999
   <shotSound>k__BackingField: 0
   <hitSound>k__BackingField: 1
+  <useSleep>k__BackingField: 0
+  <splodeDamage>k__BackingField: 0
+  <splodeSize>k__BackingField: 0
+  <splodeChance>k__BackingField: 0
+  <useSplode>k__BackingField: 0

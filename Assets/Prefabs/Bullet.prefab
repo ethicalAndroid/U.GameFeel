@@ -50,6 +50,10 @@ MonoBehaviour:
   _renderer: {fileID: 4370532745905344606}
   _rigidbody: {fileID: 4370532745204363697}
   _circleCollider: {fileID: 4370532745204363699}
+  _hitShake: {fileID: 11400000, guid: 449a64d6ee3ffe040878d9fd9c93b558, type: 2}
+  _splodeMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!50 &4370532745204363697
 Rigidbody2D:
   serializedVersion: 4
@@ -158,7 +162,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1802424637
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

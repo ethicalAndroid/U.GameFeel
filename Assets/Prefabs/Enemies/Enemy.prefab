@@ -195,6 +195,9 @@ MonoBehaviour:
   _kickback: 0
   _renderer: {fileID: 6828258860500956629}
   _usesHitFlash: 1
+  _knockbackPower: 0
+  _usesDeathParticle: 0
+  _deathFallVelocity: {x: 4, y: 3}
 --- !u!61 &6828258862149296180
 BoxCollider2D:
   m_ObjectHideFlags: 0

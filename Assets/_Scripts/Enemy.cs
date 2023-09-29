@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour, IHealth
     [SerializeField] SpriteRenderer _renderer;
     [SerializeField] bool _usesHitFlash;
     [SerializeField] float _knockbackPower;
+    [SerializeField] bool _usesDeathParticle;
+    [SerializeField] Vector2 _deathFallVelocity;
     Vector2 _knockback = Vector2.zero;
     FlashRenderer _flashRenderer;
     void Awake()
@@ -49,6 +51,13 @@ public class Enemy : MonoBehaviour, IHealth
         }
         if (_health <= 0)
         {
+            if (_usesDeathParticle)
+            {
+                Vector2 velocity = _deathFallVelocity;
+                velocity.x = velocity.x * Mathf.Sign(direction.x);
+                Vector3 rotation = new Vector3(0f,90f - _direction * 90f, 0f);
+                ParticleManager.Instance.SpawnParticle(ParticleManager.Shot.EnemyDead, _rigidbody.position, velocity, rotation);
+            }
             Destroy(gameObject);
             return true;
         }

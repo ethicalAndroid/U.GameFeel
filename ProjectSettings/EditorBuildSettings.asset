@@ -11,4 +11,88 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2-Basic.unity
     guid: cf96bf45b542c3c419400345a79deb62
+  - enabled: 1
+    path: Assets/Scenes/3-Lower HP.unity
+    guid: 400680e0cdabeb14a9e17b45f5283b90
+  - enabled: 1
+    path: Assets/Scenes/4-Rapidfire.unity
+    guid: d21c8568f98737f42a84116dc1b55927
+  - enabled: 1
+    path: Assets/Scenes/5-More E.unity
+    guid: 2929a95c0a40a0347ae9d32d97a6ee96
+  - enabled: 1
+    path: Assets/Scenes/6-Bigger.unity
+    guid: ee7cefebc5c5202459d34482452a15d5
+  - enabled: 1
+    path: Assets/Scenes/7-Muzzle.unity
+    guid: 8c100aa508fe4ff4f9b382a8bf1b79af
+  - enabled: 1
+    path: Assets/Scenes/8-Faster.unity
+    guid: 11bc88d7505a20b4d86779253a41d9fa
+  - enabled: 1
+    path: Assets/Scenes/9-Shake.unity
+    guid: 4b6e532025e5b8443aa9835b35dce630
+  - enabled: 1
+    path: Assets/Scenes/10-Impact.unity
+    guid: f1d43d9e5fbec2046b9f93fab8e819a0
+  - enabled: 1
+    path: Assets/Scenes/11-OnHit.unity
+    guid: 0ca9f9ccf2d0e2541a3972260d4e4954
+  - enabled: 1
+    path: Assets/Scenes/12-Dead E.unity
+    guid: 901eaa5eb4561254790527a1e6d2fa49
+  - enabled: 1
+    path: Assets/Scenes/13-Push E.unity
+    guid: 8f88c4b548666514e977bbb64c9c98f1
+  - enabled: 1
+    path: Assets/Scenes/14-Lerp.unity
+    guid: b4e271e09cc99fb44959e6bdc6decacd
+  - enabled: 1
+    path: Assets/Scenes/15-Look.unity
+    guid: 7d670a947326a6646988dd5e3984a725
+  - enabled: 1
+    path: Assets/Scenes/16-ScShake.unity
+    guid: 6668ef8d9be792942b9f3ada6d6528a2
+  - enabled: 1
+    path: Assets/Scenes/17-Push P.unity
+    guid: 23226393ecb4e8d42b4ff68377fd912e
+  - enabled: 1
+    path: Assets/Scenes/18-Sleep.unity
+    guid: 7f0e0329d173f534ab27d4b3bd949930
+  - enabled: 1
+    path: Assets/Scenes/19-Strafe.unity
+    guid: 10ceda4dfa64c3a4b80a3b403faba085
+  - enabled: 1
+    path: Assets/Scenes/20-Casing.unity
+    guid: df8cb6619da56644aa311b85a536b3e6
+  - enabled: 1
+    path: Assets/Scenes/21-Bass.unity
+    guid: 6dfe0271f1c9ffe49bd89f375bbb60e4
+  - enabled: 1
+    path: Assets/Scenes/22-Super.unity
+    guid: f487d681b291d65448924c530395b006
+  - enabled: 1
+    path: Assets/Scenes/23-Splode.unity
+    guid: 31779f269224c4b4ea8fc0a4369132a5
+  - enabled: 1
+    path: Assets/Scenes/24-FASTER.unity
+    guid: afa42454bd8acc1459f478b62b9ec412
+  - enabled: 1
+    path: Assets/Scenes/25-More.unity
+    guid: 74beb50c94ce3744283ba5acd94c353d
+  - enabled: 1
+    path: Assets/Scenes/26-RAPID.unity
+    guid: 41024925d864d38458e661635ef25262
+  - enabled: 1
+    path: Assets/Scenes/27-SHAKE.unity
+    guid: 665d43f92b41bd9409e7cf4bfdb2f74f
+  - enabled: 1
+    path: Assets/Scenes/28-MEGA.unity
+    guid: b00386abf2513354baf5262f7f9d3b65
+  - enabled: 1
+    path: Assets/Scenes/29-Smoke.unity
+    guid: 200e238e26fcad44baaece79b6d97ce5
+  - enabled: 1
+    path: Assets/Scenes/30-Meaning.unity
+    guid: fdb978292320305469f93ae0564d2301
   m_configObjects: {}

@@ -190,12 +190,14 @@ MonoBehaviour:
   _wallLayer:
     serializedVersion: 2
     m_Bits: 64
-  _health: 2
+  _health: 3
   _speed: 3
   _kickback: 0
   _renderer: {fileID: 6828258860500956629}
   _usesHitFlash: 1
   _knockbackPower: 3
+  _usesDeathParticle: 0
+  _deathFallVelocity: {x: 4, y: 3}
 --- !u!61 &6828258862149296180
 BoxCollider2D:
   m_ObjectHideFlags: 0

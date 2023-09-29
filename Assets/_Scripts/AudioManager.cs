@@ -30,6 +30,10 @@ public class AudioManager : MonoBehaviour
         Gunshot = 0,
         Gunhit = 1,
         Jump = 2,
+        NextSlide = 3,
+        Meatyshot = 4,
+        Explosion = 5,
+        PlayerDeath = 6,
     }
     private void LateUpdate()
     {
