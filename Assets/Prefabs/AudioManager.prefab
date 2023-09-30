@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7caea5b914aad8b42af9c63c351ad952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _volumeSetting: 0.5
+  _volumeSetting: 0.3
   _debug_lookup: 0
   _clips:
   - clip: {fileID: 8300000, guid: 4ea8bb406e554324ab60ab4acbc73dd0, type: 3}
