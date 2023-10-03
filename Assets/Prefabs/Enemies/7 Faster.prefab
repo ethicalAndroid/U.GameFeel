@@ -195,7 +195,7 @@ MonoBehaviour:
   _kickback: 0
   _renderer: {fileID: 6828258860500956629}
   _usesHitFlash: 1
-  _knockbackPower: 3
+  _knockbackPower: 5
   _usesDeathParticle: 1
   _deathFallVelocity: {x: 4, y: 3}
 --- !u!61 &6828258862149296180
