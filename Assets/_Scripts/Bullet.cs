@@ -26,12 +26,18 @@ public class Bullet : MonoBehaviour
     {
         Pools.Instance.OnRecall -= BackToPool;
     }
-    public void Setup(ObBullet bullet, Vector2 direction, Vector2 position, int layer)
+    public bool Setup(ObBullet bullet, Vector2 direction, Vector2 position, int layer)
     {
+        if (position.x == float.NaN || position.y == float.NaN)
+        {
+            BackToPool();
+            return false;
+        }
         _bullet = bullet;
         // Activate!
         gameObject.SetActive(true);
         // Set position
+        
         _rigidbody.position = position;
         transform.position = position;
         // Set collisions
@@ -46,6 +52,7 @@ public class Bullet : MonoBehaviour
         _rigidbody.velocity = direction * bullet.velocity;
         // Set bullet attack
         _damage = bullet.damage;
+        return true;
     }
 
     private void OnTriggerStay2D(Collider2D collision)

@@ -29,11 +29,13 @@ public class CoyotePlatformerController2D : MonoBehaviour
     private Ticker _jumpBuffer;
     private Ticker _coyoteTicker;
     Vector2 _knockback;
+    Vector2 _lastPosition;
 
     public void SetStrafe(bool value)
     {
         _strafing = value;
     }
+
 
     void Awake()
     {
@@ -52,6 +54,10 @@ public class CoyotePlatformerController2D : MonoBehaviour
 
     void Update()
     {
+        if (_rigidbody.position.x == float.NaN || _rigidbody.position.y == float.NaN)
+        {
+            _rigidbody.position = _lastPosition;
+        }
         _knockback.x -= Mathf.Sign(_knockback.x) * _knockbackGravity * Time.deltaTime;
         // Get input from legacy system.
         _inputJumpPressed = Input.GetButtonDown("Jump");
@@ -95,6 +101,7 @@ public class CoyotePlatformerController2D : MonoBehaviour
             _animator.SetTrigger(a_Jump);
             AudioManager.Instance.PlaySound(_jumpSound);
         }
+        _lastPosition = _rigidbody.position;
     }
     void FixedUpdate()
     {
