@@ -13,7 +13,7 @@ public class Gun : MonoBehaviour
     [SerializeField] ObBullet _bullet;
 
     [SerializeField] LayerMask _bulletLayer;
-    [SerializeField] Vector2 _offset;
+    [SerializeField] Vector2 _offset, _particleOffset;
     [SerializeField] UnityEvent _onShoot;
     [SerializeField] CoyotePlatformerController2D _playerController;
     [SerializeField] bool _usingStrafe;
@@ -43,9 +43,12 @@ public class Gun : MonoBehaviour
             _onShoot?.Invoke();
             _fireTime = _bullet.reload;
             Vector2 offset = _offset;
+            Vector2 particleOffset = _particleOffset;
             offset.x = offset.x * Mathf.Sign(transform.lossyScale.x);
+            particleOffset.x = particleOffset.x * Mathf.Sign(transform.lossyScale.x);
             Vector2 spawnPosition = (Vector2)transform.position + offset;
-            ParticleManager.Instance.SpawnParticle(_bullet.shotParticle, spawnPosition);
+            Vector2 particlePosition = (Vector2)transform.position + particleOffset;
+            ParticleManager.Instance.SpawnParticle(_bullet.shotParticle, particlePosition);
             AudioManager.Instance.PlaySound(_bullet.shotSound, 1f);
             if (_usingParticle)
             {

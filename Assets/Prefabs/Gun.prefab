@@ -50,7 +50,8 @@ MonoBehaviour:
   _bulletLayer:
     serializedVersion: 2
     m_Bits: 128
-  _offset: {x: 0.74, y: 0}
+  _offset: {x: 0.9, y: 0}
+  _particleOffset: {x: 0.74, y: 0}
   _onShoot:
     m_PersistentCalls:
       m_Calls:
